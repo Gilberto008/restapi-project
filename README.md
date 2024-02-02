@@ -14,6 +14,7 @@ This Node.js project, backed by MongoDB, focuses on providing Registration, Auth
 - CORS Handling
 - MVC Pattern
 - Local Development
+- Configuration with .env
 
 ## Installation
 
@@ -62,3 +63,19 @@ Organize the codebase using the Model-View-Controller (MVC) pattern.
 ## Local Development
 
 For local development, run the following command: `npm run dev` This will start the server at [http://localhost:3500]
+
+## Configuration with .env
+
+This project utilizes a configuration file named `.env` to store sensitive information. It's crucial to note that the `.env` file is listed in the `.gitignore` to prevent sensitive information from being exposed publicly.
+
+### Setting up .env
+
+Before running the project, create your own `.env` file in the root directory and define the following variables:
+
+ACCESS_TOKEN_SECRET= [your access token secret] REFRESH_TOKEN_SECRET= [your refresh token secret] DATABASE_URI= [your MongoDB database connection URI]
+
+Replace `[your access token secret]`, `[your refresh token secret]`, and `[your MongoDB database connection URI]` with your own secure values.
+
+### Example .env file
+
+ACCESS_TOKEN_SECRET=myAccessTokenSecret REFRESH_TOKEN_SECRET=myRefreshTokenSecret DATABASE_URI=mongodb://localhost:27017/mydatabase
